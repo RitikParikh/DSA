@@ -1,0 +1,126 @@
+================================================================================================================================================================================
+Code 1: Find the time complexity of this. it is solved by two rules --> prodcut rule(it is depend size of when give power) and sum role(it is take biggest term in that)
+//product rule
+console.log(O(4*n)); // O(n)
+console.log(O(512*n)); // O(n)
+console.log(O(n/3)); //--> O((1/3)*n) --> O(n)
+console.log(O(5*n*n)); //--> O(n*n) --> O(n^2)
+console.log(O(5*n*n)); //--> O(n*n) --> O(n^2)
+console.log(O(765)); //--> O(1) --> constent time also called
+
+//sum rule
+console.log(O(n+1000)); //--> O(n)
+console.log(O(n^2 + n)); //--> O(n^2)
+console.log(O(n+500 + n^3 + n^2)); //--> O(n^3)
+//put together
+
+console.log(O(5n^2 + 100n + 17)); //--> O(n^2 + n+1) --> O(n^2)
+console.log(O((n/3)^6 + 10n)); //--> O(n^6+n) --> O(n^6)
+
+================================================================================================================================================================================
+
+Code 2. Find Time complexity
+const foo = (n) => {
+    for (let a = 0; a < n/2; a++) {
+        console.log(a);
+    }
+
+    for (let b = 0; b < n; b++) {
+        for (let c = 0; c < n; c++) {
+            console.log(b + "," + c);
+        }
+    }
+};
+foo(10); //O(n^2)
+
+================================================================================================================================================================================
+
+Code 3. Find Time complexity
+const bar = (n) => {
+    for (let i = 0; i<3 ; i++) {
+        for (let j = 0; j<n ; j++) {
+            console.log(j);
+        }
+    }
+
+    for (let k = 0; k < 100000; k++) {
+        console.log(k);
+    }
+};
+bar(10); //O(n)
+
+================================================================================================================================================================================
+Code 4. Find Time complexity
+const boom = (n) => {
+    for (let i = 0; i<3 ; i++) {
+        bam(n);
+    }
+
+    for (let k = 0; k < 100000; k++) {
+        console.log(k);
+    }
+};
+const bam = (m) => {
+    for (let j = 0; j<m ; j++) {
+            console.log(j);
+        }
+} 
+boom(10); //O(n)  
+
+================================================================================================================================================================================
+Code 5. Find space complexity
+const calculateAverage = (numbers) => {
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+        sum += number;
+    }
+
+    return sum / numbers.length;
+}
+
+calculateAverage(1231); //O(1);
+
+================================================================================================================================================================================
+Code 6. Find space complexity
+const doubler = (items) => {
+    let newArray = [];
+
+    for (let i = 0; i < items.length; i++) {
+    newArray.push(items[i]);
+    newArray.push(items[i]);
+
+    }
+
+    return newArray;
+}
+
+doubler(["a", "b","c"]);// output-->["a","a","b","b","c","c"] //O(n);
+
+================================================================================================================================================================================
+Code 7. Find time and space complexity on recurize call
+const zoom = (n) => {
+    if(n===0) {
+        console.log("liftlof");
+        return;
+    }
+    console.log(n);
+    zomm(n-1);
+}
+
+zoom(10);// output-->10,9,8,7...liftlof //Time : O(n), space : O(n);
+
+================================================================================================================================================================================
+Code 8. Find time and space complexity on recurize call
+const zap = (n) => {
+    if(n<1) {
+        console.log("blastoff");
+        return;
+    }
+    console.log(n);
+    zomm(n-1);
+}
+
+zap(10);// output-->10,8,6,4,2 //Time : O(n), space : O(n);
+
