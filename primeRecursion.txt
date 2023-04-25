@@ -1,0 +1,10 @@
+let isPrime = (num,i=2) =>{
+    if(num < 2) return false;
+    if(num > i){
+        if(num % i) return isPrime(num, i+1);
+        else return false;
+    }
+    return true;
+}
+
+console.log(isPrime(9));
