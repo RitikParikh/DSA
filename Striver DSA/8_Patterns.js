@@ -176,6 +176,35 @@ const pat13 =()=>{
     }
 }
 
+/* 
+A
+AB
+ABC
+ABCD
+ABCDE
+*/
+const pat14 =()=>{
+    let rows =5;
+    for(let i=1; i<=rows;i++){
+        let str = ``;
+        for(let j=65; j<=65+i;j++){
+            str += `${String.fromCharCode(j)}`;
+        }
+        console.log(str);
+    }
+}
+
+const pat15 =()=>{
+    let rows =5;
+    for(let i=rows-1; i>=0;i--){
+        let str = ``;
+        for(let j=65; j<=65+i;j++){
+            str += `${String.fromCharCode(j)}`;
+        }
+        console.log(str);
+    }
+}
+
 // pat1();
 // pat2();
 // pat3();
@@ -188,4 +217,6 @@ const pat13 =()=>{
 // pat10();
 // pat11();
 // pat12();
-pat13();
+// pat13();
+// pat14();
+pat15();
