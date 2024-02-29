@@ -9,11 +9,7 @@ function checkPlaindrome(s,i) {
     return checkPlaindrome(s,i+1);
 }
 function isPalindrome(s) {
-    let str = s.toLowerCase();
-    let pattern = /[^a-z0-9]/g;
-    str =  str.replace(pattern, '');
-    console.log(str);
-    return checkPlaindrome(str,0);
+    return checkPlaindrome(s.toLowerCase().replace(/[^a-z0-9]/g, ''),0);
 };
 
 console.log(isPalindrome("A man, a plan, a canal: Panama"));
