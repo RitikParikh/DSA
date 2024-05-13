@@ -16,8 +16,8 @@ while(x!=0){
     x=Math.floor(x/10);
     count++;
 }  
-console.log(count);
- */
+console.log(count); */
+
 
 /* let num =17;
 let x = num, count=0;
@@ -28,9 +28,9 @@ while(x!=0){
     }
     x=Math.floor(x/10);
 }  
-console.log(count); */
+console.log(count);
+ */
 
-
-let num = 100
+/* let num = 100
 let logNUmn = Math.log10(num);
-console.log(logNUmn+1)
+console.log(logNUmn+1) */

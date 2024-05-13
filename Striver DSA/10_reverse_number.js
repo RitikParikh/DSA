@@ -19,7 +19,7 @@ Constraints:
 -231 <= x <= 231 - 1 */
 
 
-function reverse(num) {
+/* function reverse(num) {
     let revNum =0;
     let x=num;
     const INT_MAX = Math.pow(2, 31) - 1;
@@ -38,4 +38,16 @@ function reverse(num) {
     return revNum;
    };
 
-   reverse(12122);
+   reverse(12122); */
+
+   function reverse(x) {
+      let revNum = 0;
+      while(x > 0){
+        let digit = Math.floor(x%10);
+        revNum = revNum*10 + digit;
+        x=Math.trunc(x/10);
+      }
+      return revNum;
+   };
+
+   console.log(reverse(12122));
