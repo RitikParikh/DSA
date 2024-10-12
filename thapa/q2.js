@@ -18,3 +18,6 @@ const genrateHash = (str)=>{
 }
 
 console.log(genrateHash("my name is ritik parikh"));
+
+
+
